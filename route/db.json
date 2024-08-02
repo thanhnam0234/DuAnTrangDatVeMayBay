@@ -1,0 +1,64 @@
+{
+    "sanpham": [
+        {
+            "title": "Iphone 15 Pro",
+            "photo": "./image/1.jpeg",
+            "text": "512GB",
+            "color": "Xám",
+            "price": "43.000.000VNĐ"
+        },
+        {
+            "title": "Iphone 13",
+            "photo": "./image/2.webp",
+            "text": "128GB",
+            "color": "Hồng",
+            "price": "23.000.000VNĐ"
+        },
+        {
+            "title": "Iphone 13 Pro",
+            "photo": "./image/3.webp",
+            "text": "512GB",
+            "color": "Xám",
+            "price": "25.000.000VNĐ"
+        },
+        {
+            "title": "Iphone 13",
+            "photo": "./image/4.jpeg",
+            "text": "512GB",
+            "color": "Xanh",
+            "price": "21.000.000VNĐ"
+        }
+    ],
+    "dienthoai": [
+        {
+            "title": "Iphone 13 Pro",
+            "text": "512GB",
+            "color": "Xám",
+            "ten": "Nguyễn Bá Thế",
+            "cmt": "094456344564",
+            "email": "nguyenbathe2711@gmail.com",
+            "sdt": "09887546445",
+            "gioiTinh": "Nam"
+        },
+        {
+            "title": "Iphone 15 Pro",
+            "text": "512GB",
+            "color": "Xám",
+            "ten": "Nguyễn Quốc Anh",
+            "cmt": "094456344564",
+            "email": "qanh@gmail.com",
+            "sdt": "08891239322",
+            "gioiTinh": "Nam"
+        },
+        {
+            "title": "Iphone 15 Pro Max",
+            "text": "512GB",
+            "color": "Xám",
+            "ten": "Nguyễn Thị Hòa",
+            "cmt": "094456344564",
+            "email": "hoanguyen@gmail.com",
+            "sdt": "0976231132",
+            "gioiTinh": "Nữ"
+        }
+    ]
+  }

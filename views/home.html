@@ -1,0 +1,119 @@
+<script>
+    console.log('trang chủ');
+</script>
+<!-- Banner -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+        <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+        ></button>
+        <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+        ></button>
+        <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+        ></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./image/banner1.webp" class="photo d-block w-100" alt="" />
+        </div>
+        <div class="carousel-item">
+            <img
+                src="./image/banner2.jpeg"
+                class="photo accordion-button w-100"
+                alt=""
+            />
+        </div>
+        <div class="carousel-item">
+            <img src="./image/banner3.jpg" class="photo d-block w-100" alt="" />
+        </div>
+    </div>
+    <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+    >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+    >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<main class="container mt-5">
+    <!-- Phần bảng đơn đã mua  -->
+    <h4 class="text-center">{{title}}</h4>
+    <table class="table">
+        <thead class="table-info">
+            <th>STT</th>
+            <th>Tên máy</th>
+            <th>Màu</th>
+            <th>Dung lượng</th>
+            <th>Giá</th>
+            <th>Tùy chọn</th>
+        </thead>
+        <tr ng-repeat="item in sanpham">
+            <td>{{$index+1}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.color}}</td>
+            <td>{{item.text}}</td>
+            <td>{{item.price}}</td>
+            <td>
+                <a href="#!/detailTicket/{{item.id}}">
+                    <button class="btn btn-warning">Chi tiết</button>
+                </a>
+                <button ng-click="deletesanpham(item.id)" class="btn btn-danger">
+                    Hủy đơn
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Phần sản phẩm -->
+    <div style="margin-top: 100px"> 
+        <h1 name="sanpham" class="text-center">Sản phẩm nổi bật</h1>
+    </div>
+    <div class="row mt-5" ng-repeat="group in groups">
+        <div class="col-sm-4" ng-repeat="sanpham in group">
+            <a class="link" href="#!/booking/{{sanpham.id}}">
+                <div class="card hover-shadow">
+                    <img
+                        style="height: 200px"
+                        ng-src="{{sanpham.photo}}"
+                        class="card-img-top"
+                        alt="{{sanpham.title}}"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">{{sanpham.title}}</h5>
+                        <p style="height: 50px" class="card-text">
+                            Dung lượng {{sanpham.text}}
+                        </p>
+                        <p class="card-text">
+                            Giá chỉ từ {{sanpham.price}}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>

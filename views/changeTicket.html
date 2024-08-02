@@ -1,0 +1,62 @@
+<!-- Thông tin vé -->
+<div style="margin-top: 100px;" class="text-center">
+    <h1>{{title}}</h1>
+</div>
+<form class="text-center" ng-submit="changeTicket()">
+    <div class="text-center">
+        <div class="card">
+            <div class="card-header"></div>
+            <div class="card-body">
+                <!-- Chuyến bay -->
+                <div class="form-group row mt-3 d-flex align-items-center">
+                    <label class="col-sm-2 col-form-label">Chuyến bay</label>
+                    <div class="col-sm-10">
+                        <select id="flights" ng-model="ticket.chuyenBay" class="form-control">
+                            <option ng-repeat="item in chuyenBay" value="{{item.title}}">{{item.title}}</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Ngày bay -->
+                <div class="form-group row mt-3">
+                    <label class="col-sm-2 col-form-label">Ngày bay</label>
+                    <div class="col-sm-10">
+                        <input type="" ng-model="ticket.ngayBay" class="form-control" />
+                    </div>
+                </div>
+                <!-- Giờ bay -->
+                <div class="form-group row mt-3">
+                    <label class="col-sm-2 col-form-label">Giờ bay</label>
+                    <div class="col-sm-10">
+                        <input type="" ng-model="ticket.text" class="form-control" />
+                    </div>
+                </div>
+                <!-- Số ghế -->
+                <div class="form-group row mt-3">
+                    <label class="col-sm-2 col-form-label">Hạng ghế</label>
+                    <div class="col-sm-10">
+                        <select ng-model="ticket.hangGhe" class="form-control">
+                            <option value="1">
+                                Hạng ghế thương gia
+                            </option>
+                            <option value="0">
+                                Hạng ghế thường
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary mt-3">
+                        Xác nhận
+                    </button>
+
+                    <a href="#!/detailTicket/{{ticket.editID}}">
+                        <button type="button" class="btn btn-light mt-3">
+                            Hủy
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
